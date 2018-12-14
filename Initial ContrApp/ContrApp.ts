@@ -20,3 +20,31 @@ class TransferFunction extends Component{
 		// output = input * transFunction
 	}
 }
+
+enum OneInputOperation{NONE, GAIN}
+enum TwoInputOperation{NONE, ADD, SUB}
+
+class Operator extends Component{
+
+	operation = OneInputOperation.NONE;
+
+	determineOutput(){
+		// Code here....
+	}
+}
+
+class TwoInputOperator extends Operator{
+
+	input2:string;
+
+	determineOutput(){
+		// Code here....
+	}
+}
+
+class OneInputOperator{
+
+	determineOutput(){
+		// Code here....
+	}
+}
