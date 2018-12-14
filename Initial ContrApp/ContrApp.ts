@@ -1,8 +1,8 @@
 
 abstract class Component{
-	input:string;
-	output:string;
-	determineOutput();
+	protected input:string;
+	protected output:string;
+	protected determineOutput();
 }
 
 class Arrow extends Component{
@@ -14,7 +14,7 @@ class Arrow extends Component{
 
 class TransferFunction extends Component{
 
-	transFunction:string = '';
+	private transFunction:string;
 
 	determineOutput(){
 		// output = input * transFunction
@@ -26,7 +26,7 @@ enum TwoInputOperation{NONE, ADD, SUB}
 
 class Operator extends Component{
 
-	operation = OneInputOperation.NONE;
+	protected operation = OneInputOperation.NONE;
 
 	determineOutput(){
 		// Code here....
@@ -35,7 +35,7 @@ class Operator extends Component{
 
 class TwoInputOperator extends Operator{
 
-	input2:string;
+	private input2:string;
 
 	determineOutput(){
 		// Code here....
