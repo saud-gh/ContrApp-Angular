@@ -42,7 +42,7 @@ class TwoInputOperator extends Operator{
 	}
 }
 
-class OneInputOperator{
+class OneInputOperator extends Operator{
 
 	determineOutput(){
 		// Code here....
