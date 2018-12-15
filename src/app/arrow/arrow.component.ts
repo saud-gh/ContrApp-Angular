@@ -1,16 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { BlockComponent } from '../block/block.component';
+import { BlockComponent } from '../util/util';
 
 @Component({
   selector: 'app-arrow',
   templateUrl: './arrow.component.html',
   styleUrls: ['./arrow.component.css']
 })
-export class ArrowComponent extends BlockComponent implements OnInit {
+export class ArrowComponent implements BlockComponent, OnInit {
 
+	input = '';
+	output = '';
+	
   	constructor() {
-  		super();
+  		
   	}
+
+  	determineOutput(){}
+  	
  	ngOnInit() {
   	}
 

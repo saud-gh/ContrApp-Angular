@@ -21,9 +21,6 @@ class TransferFunction extends Component{
 	}
 }
 
-enum OneInputOperation{NONE, GAIN}
-enum TwoInputOperation{NONE, ADD, SUB}
-
 class Operator extends Component{
 
 	protected operation = OneInputOperation.NONE;
