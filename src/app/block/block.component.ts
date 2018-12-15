@@ -5,13 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './block.component.html',
   styleUrls: ['./block.component.css']
 })
-export class BlockComponent implements OnInit {
+export abstract class BlockComponent implements OnInit {
 
 	protected input:string;
 	protected output:string;
 	protected determineOutput();
 	
-  	constructor() { }
+  	constructor() {
+  		this.input = '';
+  		this.output = '';
+  	}
 
 	ngOnInit() {
 	}
