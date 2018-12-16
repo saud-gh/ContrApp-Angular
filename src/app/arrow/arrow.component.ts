@@ -15,8 +15,8 @@ export class ArrowComponent implements BlockComponent, OnInit {
   		
   	}
 
-  	determineOutput(){}
-  	
+  	determineOutput(){this.output = this.input;}
+
  	ngOnInit() {
   	}
 

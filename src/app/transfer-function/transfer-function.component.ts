@@ -10,6 +10,7 @@ export class TransferFunctionComponent implements BlockComponent, OnInit {
 
   	input = '';
 	output = '';
+	private transFunction:string;
 	
   	constructor() {
   		
@@ -17,7 +18,6 @@ export class TransferFunctionComponent implements BlockComponent, OnInit {
 
   	determineOutput(){}
 
-  ngOnInit() {
-  }
-
+	ngOnInit() {
+	}
 }
