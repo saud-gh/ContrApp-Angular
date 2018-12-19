@@ -1,10 +1,12 @@
 
-
-export interface BlockComponent{
+interface BlockComponent{
 	input:string;
 	output:string;
 	determineOutput();
 }
 
-export enum OneInputOperation{NONE, GAIN}
-export enum TwoInputOperation{NONE, ADD, SUB}
+enum OneInputOperation{NONE, GAIN}
+enum TwoInputOperation{NONE, ADD, SUB}
+
+
+export { BlockComponent, OneInputOperation, TwoInputOperation };

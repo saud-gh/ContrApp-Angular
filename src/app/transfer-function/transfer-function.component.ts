@@ -6,18 +6,18 @@ import { BlockComponent } from '../util/util';
   templateUrl: './transfer-function.component.html',
   styleUrls: ['./transfer-function.component.css']
 })
+
 export class TransferFunctionComponent implements BlockComponent, OnInit {
 
-  	input = '';
-	output = '';
-	private transFunction:string;
-	
-  	constructor() {
-  		
-  	}
+  input = '';
+  output = '';
+  private transFunction:string = '';
 
-  	determineOutput(){}
+  constructor() {
+  	
+  }
+  determineOutput(){}
 
-	ngOnInit() {
-	}
+  ngOnInit() {
+  }
 }

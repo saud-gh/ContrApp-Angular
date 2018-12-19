@@ -1,18 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { OperatorComponent } from '../operator/operator.component';
+import { OneInputOperation } from '../util/util';
+import { BlockComponent } from '../util/util';
 
 @Component({
   selector: 'app-one-input-operator',
   templateUrl: './one-input-operator.component.html',
   styleUrls: ['./one-input-operator.component.css']
 })
-export class OneInputOperatorComponent extends OperatorComponent implements OnInit {
+export class OneInputOperatorComponent implements OnInit, BlockComponent {
 
-  constructor() {
-  	super();
-  }
+	private operation = OneInputOperation.NONE;
+	input = '';
+	output = '';
 
-  ngOnInit() {
-  }
+	constructor() {
+		
+	}
+	
+	determineOutput(){}
+
+	ngOnInit() {
+	}
 
 }

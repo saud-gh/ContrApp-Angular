@@ -1,18 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { OperatorComponent } from '../operator/operator.component';
+import { TwoInputOperation } from '../util/util';
+import { BlockComponent } from '../util/util';
 
 @Component({
   selector: 'app-two-input-operator',
   templateUrl: './two-input-operator.component.html',
   styleUrls: ['./two-input-operator.component.css']
 })
-export class TwoInputOperatorComponent extends OperatorComponent implements OnInit {
+export class TwoInputOperatorComponent implements OnInit, BlockComponent {
 
-  constructor() {
-  	super();
-  }
+	private operation = TwoInputOperation.NONE;
+	input = '';
+	input2 = '';
+	output = '';
 
-  ngOnInit() {
-  }
+	constructor() {
+		
+	}
+	
+	determineOutput(){}
+
+	ngOnInit() {
+	}
 
 }
