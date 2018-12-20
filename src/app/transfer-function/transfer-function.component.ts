@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlockComponent } from '../util/util';
+import * as math from '../../../node_modules/mathjs/dist/math.min.js';
+
 
 @Component({
   selector: 'app-transfer-function',
@@ -9,14 +11,20 @@ import { BlockComponent } from '../util/util';
 
 export class TransferFunctionComponent implements BlockComponent, OnInit {
 
-  input = '';
+  input = '2*x+x^2';
   output = '';
-  private transFunction:string = '';
+  private transFunction:string = 'x+2';
+  test:string = '';
 
   constructor() {
-  	
+    this.output = this.input + '*' + this.transFunction;
+    this.test = math.eval(this.output);
   }
-  determineOutput(){}
+
+  determineOutput(){
+    // this.output = this.input + '*' + this.transFunction;
+    // this.test = math.eval(this.output).toString();
+  }
 
   ngOnInit() {
   }
