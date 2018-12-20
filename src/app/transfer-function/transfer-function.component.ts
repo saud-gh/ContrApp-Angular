@@ -11,20 +11,21 @@ import * as math from '../../../node_modules/mathjs/dist/math.min.js';
 
 export class TransferFunctionComponent implements BlockComponent, OnInit {
 
-  input = '2*x+x^2';
+  input = 'x^2';
   output = '';
-  private transFunction:string = 'x+2';
-  test:string = '';
+  private transFunction:string = '(5x+6)';
+  dispResult;
+  simpResult;
+  tex;
 
   constructor() {
     this.output = this.input + '*' + this.transFunction;
-    this.test = math.eval(this.output);
+    this.dispResult = math.parse(this.output);
+    this.simpResult = math.simplify(this.dispResult);
+    this.tex = this.dispResult.toTex(this.simpResult);
   }
 
-  determineOutput(){
-    // this.output = this.input + '*' + this.transFunction;
-    // this.test = math.eval(this.output).toString();
-  }
+  determineOutput(){}
 
   ngOnInit() {
   }
