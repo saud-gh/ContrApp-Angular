@@ -22,6 +22,7 @@
     "@angular/router": "~7.0.0",
     "@types/mathjax": "0.0.35",
     "@types/mathjs": "^4.4.4",
+    "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",
     "mathjax-node": "^2.1.1",
     "mathjs": "^5.4.0",

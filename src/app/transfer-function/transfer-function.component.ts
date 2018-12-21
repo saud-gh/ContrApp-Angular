@@ -11,20 +11,21 @@ import * as math from '../../../node_modules/mathjs/dist/math.min.js';
 
 export class TransferFunctionComponent implements BlockComponent, OnInit {
 
-  input = 't^2';
+  input = 'sqrt(S/(S+1))';
   output = '';
-  private transFunction:string = '(5t+6)';
+  private transFunction:string = '(5S+6)';
   private tex;
   private parsedOutput;
+  jax;
 
   constructor() {
-    this.output = this.input + '*' + this.transFunction;
-    this.parsedOutput = math.parse(this.output);
-    this.tex = this.parsedOutput.toTex();
+    this.determineOutput();
   }
 
   determineOutput(){
-    
+    this.output = this.input + '*' + this.transFunction;
+    this.parsedOutput = math.parse(this.output);
+    this.tex = this.parsedOutput.toTex();
   }
 
   ngOnInit() {
