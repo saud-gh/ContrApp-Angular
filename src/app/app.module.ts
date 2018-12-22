@@ -6,6 +6,7 @@ import { ArrowComponent } from './arrow/arrow.component';
 import { TransferFunctionComponent } from './transfer-function/transfer-function.component';
 import { TwoInputOperatorComponent } from './two-input-operator/two-input-operator.component';
 import { OneInputOperatorComponent } from './one-input-operator/one-input-operator.component';
+import { CanvasComponent } from './canvas/canvas.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { OneInputOperatorComponent } from './one-input-operator/one-input-operat
     ArrowComponent,
     TransferFunctionComponent,
     TwoInputOperatorComponent,
-    OneInputOperatorComponent
+    OneInputOperatorComponent,
+    CanvasComponent
   ],
   imports: [
     BrowserModule
