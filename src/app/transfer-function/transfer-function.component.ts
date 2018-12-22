@@ -11,12 +11,12 @@ import * as math from '../../../node_modules/mathjs/dist/math.min.js';
 
 export class TransferFunctionComponent implements BlockComponent, OnInit {
 
-  input = 'sqrt(S/(S+1))';
+  input = '5';
   output = '';
   private transFunction:string = '(5S+6)';
   private tex;
   private parsedOutput;
-  jax;
+  private simp;
 
   constructor() {
     this.determineOutput();
